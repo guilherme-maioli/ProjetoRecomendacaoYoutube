@@ -1,4 +1,4 @@
-# ProjetoRecomendacaoYoutube
+# Projeto Recomendação de vídeos do Youtube
 Projeto de recomendação de vídeos do youtube com assuntos sobre data-science e machine learning.
 
 Desenvolvido em quatro etapas:
