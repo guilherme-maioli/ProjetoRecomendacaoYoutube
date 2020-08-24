@@ -12,6 +12,5 @@ Foi utilizado alguns modelos para comparação de resultado e algumas técnicas 
 
 No deploy foi utilizado Flask (de maneira básica, apenas para demonstração) e Docker para utilizar o conceito de container para colocar em produção.
 
-O resultado final você pode ver aqui: https://sleepy-river-48950.herokuapp.com/
-[aqui](https://sleepy-river-48950.herokuapp.com/)
+O resultado final você pode ver [aqui](https://sleepy-river-48950.herokuapp.com/).
 
