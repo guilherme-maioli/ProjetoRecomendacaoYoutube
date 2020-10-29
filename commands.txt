@@ -1,0 +1,10 @@
+docker build . -t nome
+docker run -e PORT=80 nome
+
+secret-brushlands-53430
+https://secret-brushlands-53430.herokuapp.com/ | https://git.heroku.com/secret-brushlands-53430.git
+
+heroku container:push web -a secret-brushlands-53430 
+heroku container:release web -a secret-brushlands-53430 
+
+heroku open -a secret-brushlands-53430 

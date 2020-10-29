@@ -46,15 +46,10 @@ def clean_views(data):
 
 def compute_features(data):
 
-	if 'watch-view-count' not in data:
-		return None
-
-	publish_date = clean_date(data)
-	if publish_date is None:
-		return None
-
-	views = clean_views(data)
-	title = data['watch-title']
+	publish_date = pd.to_datetime(data['upload_date'])
+	
+	views = data['view_count']
+	title = data['title']
 
 	features = dict()
 
@@ -88,6 +83,6 @@ def compute_prediction(data):
 	return p 
 
 def log_data(data, features_array, p):
-	video_id = data.get('og:video:url', '')
+	#video_id = data.get('og:video:url', '')
 	data['prediction'] = p
 	data['features_array'] = features_array.todense().tolist()

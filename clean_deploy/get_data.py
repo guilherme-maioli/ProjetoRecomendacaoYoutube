@@ -2,22 +2,24 @@ import requests as rq
 import bs4 as bs4
 import re
 import time
+import youtube_dlc as ytdl
+
+
+
 
 # retorna a string com o código fonte da página com varios vídeos
 def download_search_page(query, page):
 	url = "https://www.youtube.com/results?search_query={query}&sp=CAI%253D&p={page}"
 	urll = url.format(query=query, page=page)
-	response = rq.get(urll)
-
+	response = rq.get(urll, headers={"Accept-Language": "pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3"})
+	
 	return response.text
 
 # retorn a string com o código fonte da página do vídeo
 def download_video_page(link):
 	url = "https://www.youtube.com{link}"
 	urll = url.format(link=link)
-	response = rq.get(urll)
-
-	link_name = re.search("v=(.*)", link).group(1)
+	response = rq.get(urll, headers={"Accept-Language": "pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3"})
 
 	return response.text
 
@@ -67,4 +69,5 @@ def parse_video_page(page_html):
         
 
 	return data
+
 
