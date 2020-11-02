@@ -14,6 +14,9 @@ No deploy foi utilizado Flask (de maneira básica, apenas para demonstração) e
 
 O resultado final da primeira versão você pode ver clicando [aqui](https://sleepy-river-48950.herokuapp.com/).
 
+
+----------------------------------------------------------------------
+
 ### 2ª versão:
 1. Os dados antes armazenados em arquivos, agora estão sendo armazenados em uma banco de dados (SQLite3)
 2. A parte do html foi separada em novos arquivos para melhor organização
