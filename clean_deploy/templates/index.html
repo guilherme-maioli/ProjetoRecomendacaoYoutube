@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<body>
+    <h1> {% block title %} Recomendador de vídeos {% endblock %}</h1>
+
+    <table>
+    
+        {% for post in posts %}
+        <tr>
+            <th>
+                <a href=" {{ post[0] }} ">
+                    {{ post[1] }}
+                </a>
+            </th>
+            <th>
+                {{ post[2] }}
+            </th>
+        </tr>
+        {% endfor %}
+
+    </table>
+</body>
+
+{% endblock %}
+
+

@@ -1,5 +1,5 @@
 import os.path
-from flask import Flask, request
+from flask import Flask, request, render_template
 import os
 import json
 import run_backend
@@ -33,22 +33,26 @@ def get_predictions():
 	# do maior pro menor do ultimo elemento = score
 	predictions = sorted(predictions, key=lambda x: x[2], reverse=True)[:30]
 
-	predictions_formatted = []
-	for e in predictions:
-		#print(e)
-		predictions_formatted.append("<tr><th><a href=\"{link}\">{title}</a></th><th>{score}</th></tr>".format(title=e[1], link=e[0], score=e[2]))
+	#predictions_formatted = []
+	#for e in predictions:
+	#	#print(e)
+	#	predictions_formatted.append("<tr><th><a href=\"{link}\">{title}</a></th><th>{score}</th></tr>".format(title=e[1], link=e[0], score=e[2]))
 
-	return '\n'.join(predictions_formatted)
+	#return '\n'.join(predictions_formatted)
+	return predictions
 
 @app.route('/')
 def main_page():
 	preds = get_predictions()
-	return """ <head><h1>Recomendador de Vídeos do Youtube</h1></head>
-	<body>
-	<table>
-			{}
-	</table>
-	</body>""".format(preds)
+	#print(preds)
+	#return """ <head><h1>Recomendador de Vídeos do Youtube</h1></head>
+	#<body>
+	#<table>
+	#		{}
+	#</table>
+	#</body>""".format(preds)
+
+	return render_template('index.html', posts=preds)
 
 
 @app.route('/predict')
