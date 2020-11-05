@@ -23,3 +23,12 @@ O resultado final da primeira versão você pode ver clicando [aqui](https://sle
 3. Foi criado um novo visual mais agradável.
 
 O resultado final da segunda versão você pode ver clicando [aqui](https://still-reaches-80354.herokuapp.com/).
+
+------------------------------------------------------------------------
+
+## 3ª versão:
+
+1. Algumas alterações no visual.
+2. Foi criado uma opção para ver o SCORE de qualquer outro vídeo em cima do modelo treinado.
+
+O resultado final da terceira versão você pode ver clicando [aqui](https://damp-waters-89251.herokuapp.com/ ).
