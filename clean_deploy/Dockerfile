@@ -18,8 +18,7 @@ RUN python db_starter.py
 
 # Run the app.  CMD is required to run on Heroku
 # $PORT is set by Heroku			
-#CMD gunicorn --bind 0.0.0.0:$PORT wsgi 
-CMD ["gunicorn", "-b", "0.0.0.0:80", "app:app"]
+CMD gunicorn --bind 0.0.0.0:$PORT wsgi 
 #CMD gunicorn --bind 0.0.0.0:80 wsgi 
 
 
@@ -27,5 +26,14 @@ CMD ["gunicorn", "-b", "0.0.0.0:80", "app:app"]
 #https://github.com/heroku/alpinehelloworld
 #https://devcenter.heroku.com/articles/container-registry-and-runtime
 
+# vesrion 1:
 #Creating app... done, ⬢ sleepy-river-48950
 #https://sleepy-river-48950.herokuapp.com/ | https://git.heroku.com/sleepy-river-48950.git
+
+
+# version 2: 
+# https://still-reaches-80354.herokuapp.com/
+
+# version 3
+# Creating app... done, ⬢ damp-waters-89251
+# https://damp-waters-89251.herokuapp.com/ | https://git.heroku.com/damp-waters-89251.git

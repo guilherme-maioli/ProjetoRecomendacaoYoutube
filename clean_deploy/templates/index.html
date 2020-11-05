@@ -2,26 +2,27 @@
 
 {% block content %}
 
-<body>
-    <h1> {% block title %} Recomendador de vídeos {% endblock %}</h1>
-
-    <table>
-    
-        {% for post in posts %}
+<table class="table table-striped" >
+    <thead class="thead-dark">
         <tr>
-            <th>
-                <a href=" {{ post[0] }} ">
-                    {{ post[1] }}
-                </a>
-            </th>
-            <th>
-                {{ post[2] }}
-            </th>
+            <th scope="col">{% block title %} Recomendador de vídeos {% endblock %}</th>
+            <th scope="col">Score</th>
         </tr>
-        {% endfor %}
+    </thead>
+    {% for post in posts %}
+    <tr>
+        <th>
+            <a href=" {{ post[0] }} ">
+                {{ post[1] }}
+            </a>
+        </th>
+        <th>
+            {{ post[2] }}
+        </th>
+    </tr>
+    {% endfor %}
 
-    </table>
-</body>
+</table>
 
 {% endblock %}
 
